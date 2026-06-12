@@ -121,40 +121,46 @@ setInterval(spawnFloating, 2800);
 for (let i = 0; i < 5; i++) setTimeout(spawnFloating, i * 500);
 
 
-// ─── 3. CONTROLE DE MÚSICA ────────────────────
-const music    = document.getElementById('bg-music');
-const musicBtn = document.getElementById('musicBtn');
+// ─── 3. CONTROLE DE MÚSICA + OVERLAY DE ENTRADA ───
+const music      = document.getElementById('bg-music');
+const musicBtn   = document.getElementById('musicBtn');
+const overlay    = document.getElementById('entry-overlay');
+const entryBtn   = document.getElementById('entryBtn');
 let musicStarted = false;
 
+// Bloqueia o scroll enquanto o overlay estiver visível
+document.body.style.overflow = 'hidden';
+
+entryBtn.addEventListener('click', () => {
+  music.volume = 0.4;
+  music.play()
+    .then(() => {
+      musicBtn.classList.add('playing');
+      musicStarted = true;
+    })
+    .catch(err => console.warn('Erro ao tocar:', err));
+
+  // Fade out no overlay e libera o scroll
+  overlay.classList.add('hide');
+  setTimeout(() => {
+    overlay.remove();
+    document.body.style.overflow = '';
+  }, 800);
+});
+
+// Botão flutuante de música (pausar/retomar)
 musicBtn.addEventListener('click', () => {
-  if (!musicStarted) {
-    music.volume = 0.4;
-    musicStarted = true;
-  }
   if (music.paused) {
-    music.play()
-      .then(() => {
-        musicBtn.classList.add('playing');
-        musicBtn.title = 'Pausar música';
-      })
-      .catch(err => console.warn('Autoplay bloqueado:', err));
+    music.play().then(() => {
+      musicBtn.classList.add('playing');
+      musicBtn.title = 'Pausar música';
+    });
   } else {
     music.pause();
     musicBtn.classList.remove('playing');
     musicBtn.title = 'Tocar música';
   }
 });
-
-// Tenta iniciar no primeiro clique na página
-window.addEventListener('click', () => {
-  if (!musicStarted && music.src) {
-    music.volume = 0.4;
-    music.play()
-      .then(() => { musicBtn.classList.add('playing'); musicStarted = true; })
-      .catch(() => {});
-  }
-}, { once: true });
-
 
 // ─── 4. REVEAL AO ROLAR ───────────────────────
 function addReveal() {

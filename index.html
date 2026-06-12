@@ -3,15 +3,42 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Para Você ❤️</title>
+  <title>Feliz dia dos namorados! ❤️</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400&display=swap" rel="stylesheet" />
 </head>
 <body>
 
+    <!-- ══════════════════════════════════════
+       OVERLAY DE ENTRADA
+  ══════════════════════════════════════ -->
+  <div id="entry-overlay">
+    <div class="entry-web" aria-hidden="true">
+      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <g stroke="rgba(192,21,42,0.4)" stroke-width="0.8" fill="none">
+          <line x1="100" y1="100" x2="100" y2="10"/>
+          <line x1="100" y1="100" x2="175" y2="35"/>
+          <line x1="100" y1="100" x2="190" y2="100"/>
+          <line x1="100" y1="100" x2="175" y2="165"/>
+          <line x1="100" y1="100" x2="100" y2="190"/>
+          <line x1="100" y1="100" x2="25"  y2="165"/>
+          <line x1="100" y1="100" x2="10"  y2="100"/>
+          <line x1="100" y1="100" x2="25"  y2="35"/>
+          <polygon points="100,28 163,53 185,120 155,178 100,172 45,178 15,120 37,53"/>
+          <polygon points="100,50 148,68 165,115 142,155 100,150 58,155 35,115 52,68"/>
+          <polygon points="100,68 135,82 148,112 130,138 100,134 70,138 52,112 65,82"/>
+        </g>
+        <circle cx="100" cy="100" r="5" fill="rgba(192,21,42,0.8)"/>
+      </svg>
+    </div>
+    <p class="entry-title">Para o meu amor, Dayanne ❤️</p>
+    <p class="entry-subtitle">clique para começar</p>
+    <button class="entry-btn" id="entryBtn">▶ tocar música</button>
+  </div>
+
   <!-- MÚSICA DE FUNDO
        Substitua "sua-musica.mp3" pelo nome do seu arquivo de áudio. -->
-  <audio id="bg-music" loop>
+  <audio id="bg-music" loop preload="auto">
     <source src="/src/Phillip Phillips - Gone, Gone, Gone - PhilPhillipsVEVO (youtube).mp3" type="audio/mpeg" />
   </audio>
 
@@ -127,8 +154,6 @@
             <circle cx="30" cy="30" r="8"/><circle cx="30" cy="30" r="16"/><circle cx="30" cy="30" r="24"/>
           </g>
         </svg>
-        <p>Imagem 1</p>
-        <small>Substitua "imagem1.jpg"</small>
       </div>
     </div>
 
@@ -136,13 +161,12 @@
       <span class="section-label">// Peter &amp; Gwen</span>
       <h2>Desde o primeiro olhar</h2>
       <p>
-          Nunca nos vimos pessoalmente, muito menos cruzamos olhares,
-          mas eu nunca precisei disso pra te amar de verdade. 
-          Assim como Peter amou a Gwen, eu teria uma foto sua no meu
-          computador e esperaria o momento certo pra tentar te chamar pra sair.
-          Eu não só te amo como Peter ama a Gwen, eu te amo do meu próprio jeito.
-
-
+        Nunca nos vimos pessoalmente, muito menos cruzamos olhares, 
+        mas eu nunca precisei disso pra te amar de verdade. Assim 
+        como Peter amou a Gwen, eu teria uma foto sua no meu 
+        computador e esperaria o momento certo pra tentar te 
+        chamar pra sair. Eu não só te amo como Peter ama a Gwen, 
+        eu te amo do meu próprio jeito.  
       </p>
     </div>
   </section>
@@ -157,8 +181,11 @@
       <span class="section-label">// A distância</span>
       <h2>Mesmo longe, perto</h2>
       <p>
-        Cada mensagem sua é uma teia que atravessa essa distância toda.
-        Você nunca some de verdade daqui.
+        Não importa a distância que esteja nos separando, 
+        irei sempre te amar mesmo que tenha qualquer obstáculo 
+        ou dificuldade em minha frente, sempre irei superá-los 
+        como Peter fez pela Gwen. Nunca irei desviar desse caminho, 
+        porque afinal, você é minha direção!
       </p>
       <div class="distance-badge">
         <div class="distance-web" aria-hidden="true">
@@ -174,7 +201,7 @@
         </div>
         <!-- Substitua ∞ pelo número real de km -->
         <span class="km-number">∞</span>
-        <span class="km-label">km entre a gente,<br />nenhum no coração</span>
+        <span class="km-label">Uma distância gigantesca entre a gente,<br />mas nada que separe nossos corações.</span>
       </div>
     </div>
 
@@ -195,8 +222,6 @@
             <circle cx="30" cy="30" r="8"/><circle cx="30" cy="30" r="16"/><circle cx="30" cy="30" r="24"/>
           </g>
         </svg>
-        <p>Imagem 2</p>
-        <small>Substitua "imagem2.jpg"</small>
       </div>
     </div>
 
@@ -237,7 +262,7 @@
       </div>
 
       <div class="letter-header">
-        <span class="letter-to">Para você,</span>
+        <span class="letter-to">Para o meu amor, Dayanne! </span>
       </div>
 
       <div class="letter-body">
@@ -245,16 +270,23 @@
           PERSONALIZE AQUI — escreva sua mensagem do coração.
         -->
         <p>
-          Escreva aqui sua mensagem principal.
-          Pode ser longa, pode ser curta —
-          o importante é que venha de você.
+          Eu acho muito importante a icônica frase do Tio Ben:
+          "Grandes poderes trazem grandes responsabilidades", 
+          mas ele esqueceu de mencionar que o amor também é como 
+          um grande superpoder, que traz responsabilidades e, 
+          principalmente, medo.
         </p>
         <p>
-          Fale o que você sente, o que você espera,
-          o que faz a distância valer a pena.
+          E isso não é nada ruim, porque é essa responsabilidade 
+          que me ajuda a ser uma pessoa melhor a cada dia. 
+          Te amar foi o maior presente que me foi dado e agradeço 
+          todos os dias. É verdade que sinto medo, mas o meu único 
+          medo é o de te perder, meu amor! Por isso, sempre vou me 
+          esforçar para ser alguém que você merece.
         </p>
         <p>
-          Esse espaço é todo seu. ❤️
+          Enfim, quero te desejar feliz Dia dos Namorados, minha princesa! <br>
+          Obrigado por ser sempre essa pessoa incrível — tenho muito orgulho de você. ❤️
         </p>
       </div>
 
